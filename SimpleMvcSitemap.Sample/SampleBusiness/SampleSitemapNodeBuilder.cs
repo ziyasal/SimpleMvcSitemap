@@ -38,7 +38,14 @@ namespace SimpleMvcSitemap.Sample.SampleBusiness
 
             
 
-            nodes.Add(new SitemapNode("http://joelabrahamsson.com/xml-sitemap-with-aspnet-mvc/"));
+            nodes.Add(new SitemapNode("http://joelabrahamsson.com/xml-sitemap-with-aspnet-mvc/")
+            {
+                Link = new SiteMapLink("http://m.joelabrahamsson.com/xml-sitemap-with-aspnet-mvc/")
+                {
+                    Rel = "alternate",
+                    Media = "only screen and (max-width: 640px)"
+                }
+            });
 
             return nodes;
         }

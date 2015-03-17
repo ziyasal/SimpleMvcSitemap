@@ -43,6 +43,11 @@ namespace SimpleMvcSitemap
                 namespaces.Add(Namespaces.Video);
             }
 
+            if (Nodes.Any(node => node.Link != null))
+            {
+                namespaces.Add(Namespaces.Xhtml);
+            }
+
             return namespaces;
         }
     }

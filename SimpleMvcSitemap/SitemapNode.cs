@@ -83,6 +83,8 @@ namespace SimpleMvcSitemap
         [XmlElement("mobile", Order = 8, Namespace = Namespaces.Mobile)]
         public SitemapMobile Mobile { get; set; }
 
+        [XmlElement("link", Order = 9, Namespace = Namespaces.Xhtml)]
+        public SiteMapLink Link { get; set; }
 
         public bool ShouldSerializeLastModificationDate()
         {
@@ -98,6 +100,5 @@ namespace SimpleMvcSitemap
         {
             return Priority.HasValue;
         }
-
     }
 }
