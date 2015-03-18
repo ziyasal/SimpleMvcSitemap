@@ -84,7 +84,7 @@ namespace SimpleMvcSitemap
         public SitemapMobile Mobile { get; set; }
 
         [XmlElement("link", Order = 9, Namespace = Namespaces.Xhtml)]
-        public SiteMapLink Link { get; set; }
+        public MobileXhtmlLink Link { get; set; }
 
         public bool ShouldSerializeLastModificationDate()
         {
